@@ -1,7 +1,8 @@
 ----- Welcome to KWS -----
 
 This program is an implementation of the small footprint keyword spotter system described by google.
-It attempts to ease the process of formatting audios and extracting useful training information from them, as well as training of a convolutional neural network.
+It attempts to ease the process of formatting audios and extracting useful training information from them, 
+as well as training of a convolutional neural network.
 
 --------------------------
 
