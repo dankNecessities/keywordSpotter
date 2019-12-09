@@ -1,0 +1,84 @@
+.......... TRAINING MODEL ..........
+
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/samo/.local/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-06-12 11:43:48.178237: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-06-12 11:43:48.202489: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1995325000 Hz
+2019-06-12 11:43:48.203066: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x2b5d0a0 executing computations on platform Host. Devices:
+2019-06-12 11:43:48.203118: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+loaded_model from disk
+(1146, 98, 40, 1)
+(10175, 20)
+WARNING:tensorflow:From /home/samo/.local/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Train on 10175 samples, validate on 1146 samples
+Epoch 1/60
+10175/10175 [==============================] - 9s 906us/step - loss: 2.4942 - acc: 0.2614 - val_loss: 2.4260 - val_acc: 0.2435
+Epoch 2/60
+10175/10175 [==============================] - 8s 744us/step - loss: 1.8890 - acc: 0.4519 - val_loss: 2.0094 - val_acc: 0.3857
+Epoch 3/60
+10175/10175 [==============================] - 8s 751us/step - loss: 1.4004 - acc: 0.6056 - val_loss: 1.9132 - val_acc: 0.4276
+Epoch 4/60
+10175/10175 [==============================] - 8s 750us/step - loss: 1.0179 - acc: 0.7237 - val_loss: 1.7097 - val_acc: 0.4555
+Epoch 5/60
+10175/10175 [==============================] - 8s 750us/step - loss: 0.7501 - acc: 0.8033 - val_loss: 1.8439 - val_acc: 0.4625
+Epoch 6/60
+10175/10175 [==============================] - 8s 753us/step - loss: 0.5814 - acc: 0.8551 - val_loss: 1.8230 - val_acc: 0.4956
+Epoch 7/60
+10175/10175 [==============================] - 8s 752us/step - loss: 0.4509 - acc: 0.8908 - val_loss: 1.7341 - val_acc: 0.4904
+Epoch 8/60
+10175/10175 [==============================] - 8s 754us/step - loss: 0.3888 - acc: 0.9042 - val_loss: 1.6859 - val_acc: 0.4948
+Epoch 9/60
+10175/10175 [==============================] - 8s 750us/step - loss: 0.2944 - acc: 0.9262 - val_loss: 2.0396 - val_acc: 0.4529
+Epoch 10/60
+10175/10175 [==============================] - 8s 750us/step - loss: 0.2292 - acc: 0.9449 - val_loss: 1.7262 - val_acc: 0.5541
+Epoch 11/60
+10175/10175 [==============================] - 8s 752us/step - loss: 0.2049 - acc: 0.9492 - val_loss: 1.8062 - val_acc: 0.5271
+Epoch 12/60
+10175/10175 [==============================] - 8s 750us/step - loss: 0.1227 - acc: 0.9759 - val_loss: 1.4706 - val_acc: 0.6003
+Epoch 13/60
+10175/10175 [==============================] - 8s 750us/step - loss: 0.0992 - acc: 0.9805 - val_loss: 1.4821 - val_acc: 0.6099
+Epoch 14/60
+10175/10175 [==============================] - 8s 750us/step - loss: 0.0781 - acc: 0.9864 - val_loss: 1.3401 - val_acc: 0.6230
+Epoch 15/60
+10175/10175 [==============================] - 8s 750us/step - loss: 0.0568 - acc: 0.9896 - val_loss: 1.5548 - val_acc: 0.6134
+Epoch 16/60
+10175/10175 [==============================] - 8s 749us/step - loss: 0.1399 - acc: 0.9637 - val_loss: 1.7357 - val_acc: 0.5672
+Epoch 17/60
+10175/10175 [==============================] - 8s 755us/step - loss: 0.0866 - acc: 0.9827 - val_loss: 1.5245 - val_acc: 0.5942
+Epoch 18/60
+10175/10175 [==============================] - 8s 752us/step - loss: 0.0535 - acc: 0.9920 - val_loss: 1.4268 - val_acc: 0.6291
+Epoch 19/60
+10175/10175 [==============================] - 8s 748us/step - loss: 0.0407 - acc: 0.9943 - val_loss: 1.4383 - val_acc: 0.6379
+Epoch 20/60
+10175/10175 [==============================] - 8s 751us/step - loss: 0.0264 - acc: 0.9974 - val_loss: 1.5284 - val_acc: 0.6248
+Epoch 21/60
+10175/10175 [==============================] - 8s 755us/step - loss: 0.0243 - acc: 0.9978 - val_loss: 1.5981 - val_acc: 0.6457
+Epoch 22/60
+10175/10175 [==============================] - 8s 749us/step - loss: 0.0206 - acc: 0.9984 - val_loss: 1.3321 - val_acc: 0.6745
+Epoch 23/60
+10175/10175 [==============================] - 8s 751us/step - loss: 0.0148 - acc: 0.9990 - val_loss: 1.3830 - val_acc: 0.6536
+Epoch 24/60
+10175/10175 [==============================] - 8s 752us/step - loss: 0.0157 - acc: 0.9986 - val_loss: 1.8773 - val_acc: 0.6047
+Epoch 25/60
+10175/10175 [==============================] - 8s 754us/step - loss: 0.0140 - acc: 0.9990 - val_loss: 1.4626 - val_acc: 0.6745
+Epoch 26/60
+10175/10175 [==============================] - 8s 750us/step - loss: 0.0126 - acc: 0.9991 - val_loss: 1.3852 - val_acc: 0.6597
+Epoch 27/60
+10175/10175 [==============================] - 8s 751us/step - loss: 0.0132 - acc: 0.9983 - val_loss: 1.6165 - val_acc: 0.6187
+Epoch 28/60
+10175/10175 [==============================] - 8s 748us/step - loss: 0.0109 - acc: 0.9996 - val_loss: 1.5031 - val_acc: 0.6623
+Epoch 29/60
+10175/10175 [==============================] - 8s 749us/step - loss: 0.0081 - acc: 0.9996 - val_loss: 1.4733 - val_acc: 0.6693
+Epoch 30/60
+10175/10175 [==============================] - 8s 750us/step - loss: 0.0074 - acc: 0.9997 - val_loss: 1.5095 - val_acc: 0.6684
+Epoch 31/60
+10175/10175 [==============================] - 8s 753us/step - loss: 0.0086 - acc: 0.9991 - val_loss: 1.4955 - val_acc: 0.6789
+Epoch 32/60
+10175/10175 [==============================] - 8s 749us/step - loss: 0.0061 - acc: 0.9996 - val_loss: 1.4217 - val_acc: 0.6832
+Saved model to disk
+
+.......... TRAINING COMPLETE ..........

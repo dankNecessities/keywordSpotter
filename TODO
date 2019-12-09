@@ -1,0 +1,53 @@
+# Audio pre-processing phase 
+1. Convert files to wav format.
+2. Files collected are normalized (1dB), using pydub.
+3. DC Offset is removed.
+4. Apply low-pass filter.
+5. These files are then initially split by auditok into separate phrases.
+6. These phrases are then split into individual words (manually).
+7. Keywords are sorted into folders by name.
+8. These keywords are then padded with random noise into uniform length recordings.
+9. Process automation.
+
+# Training phase
+1. The audios are converted to mel-spectrum coefficients. (We are using mel filterbanks)
+2. These are then fed into the CNN.
+3. CNN state is saved to disk.
+4. Results are determined by use of testing data.
+
+# Post training phase
+1. CNN is loaded from file 
+2. Voice detector is activated (daemon). 
+3. Audio is saved in 50ms segments and tested for speech activity.
+4. On detection audio segment is serialized and fed through NN.
+5. CNN detection result is paired to command.
+
+#ISSUES LIST
+- Using len(sound) to calculate padding in time returns inaccurate samples
+
+#TASKS
+- Wider FFT bin?
+# - Add 'empty' folder(s) + audios with wrong training data
+# - List of keywords and their binary mappings (find out about to_categorical)
+# - Create_cnn script should count the number of inputs
+# - Create a nn that fits the output bit size of the total number of keywords.
+- Change ordering of run.sh normalize (should work after tokenization, not before)
+- Grab 50ms segments from audio stream (can be mic or prerecorded audios)
+- Set up calibration fn for energy threshold
+- Voice detection fn
+- Serialize detected segments fn (already present, simply connect to detected audios)
+- CNN output to command interface
+
+#PROCESS FOR AUDIO STREAM
+- Auditok daemon in background, records snippets of speech (3s?) when detected (non-blocking?)
+- The snippets are run through normalizer then NN, in windowed fashion, step size same as for NN
+- 
+- Recognized words are passed through a chatterbox-type rule-based system that assigns the commands to various 
+functions
+- Program returns to listening state
+
+[{
+	1: How to call python files with parameters from other python files,
+	2: Getting return values from these files,
+	3: 
+}]

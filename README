@@ -1,0 +1,73 @@
+----- Welcome to KWS -----
+
+This program is an implementation of the small footprint keyword spotter system described by google.
+It attempts to ease the process of formatting audios and extracting useful training information from them, as well as training of a convolutional neural network.
+
+--------------------------
+
+REQUIREMENTS
+
+The program was run and tested on the following platforms:
+
+A. Ubuntu Linux				  18.04
+
+B. Python 					  3.6.7
+
+Package                       Version       
+----------------------------- --------------
+argcomplete                   1.9.4         
+argparse					  1.1
+auditok                       0.1.5         
+dash                          0.39.0        
+dash-core-components          0.44.0        
+dash-daq                      0.1.0         
+dash-html-components          0.14.0        
+dash-renderer                 0.20.0        
+dash-table                    3.6.0         
+h5py                          2.9.0         
+Keras                         2.2.4         
+Keras-Applications            1.0.7         
+Keras-Preprocessing           1.0.9         
+numpy                         1.16.2        
+PyAudio                       0.2.11        
+pydub                         0.23.1        
+PyQt5                         5.11.3        
+PyQt5-sip                     4.19.13       
+qtconsole                     4.4.3         
+scikit-learn                  0.20.2        
+scipy                         1.2.1         
+sox                           1.3.7         
+tensorflow                    1.13.1        
+tensorflow-estimator          1.13.0        
+
+--------------------------
+
+HOW TO USE
+
+A. PREPARING THE AUDIO DATA
+
+1. Copy all audios to be used for training/testing into kws/tokens folder (create it if it doesn't exist).
+2. Split these audios into training and test folders, with each word in its own folder.
+	- Copy tokens into kws/tokens/{label}/test and kws/tokens/{label}/train.
+	**The label used for training the audios is the name of the keyword.
+3. Make sure the folder names or the audio files do not have any whitespace (replace with underscores "_")
+	- There is a utility program in kws/scripts/sh called renamer.sh that can rename all files by their folder name
+	- To use it, simply copy it to the folder containing the keywords and run it 
+	.e.g for a keyword folder in kws/tokens/{keyword}, copy to kws/tokens/ and run.
+4. Run kws/dump.sh. 
+	- Dumped npy files will be located in kws/data/{label}.
+	** If you already have converted audios, simply copy them to the data folder directly.
+	** Files stored in tokens folder should be removed after dumping, unless otherwise desired.
+5. Run kws/train.sh.
+6. When training completes, run kws/run.sh to open the interface.
+
+B. USING THE INTERFACE
+
+1. The interface is simple to use, with two checkboxes to signify which type of audio is required.
+	- If audio files is selected, locate the audio using the dialog accessed via the "open" button.
+	- If microphone is selected, simply proceed to the next step.
+2. After selecting an option, press the "start" button.
+3. When detection has completed, press the "execute command" button to run the associated command. 
+	** Note that not all keywords have associated commands.
+
+--------------------------
