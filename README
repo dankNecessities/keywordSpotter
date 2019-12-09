@@ -9,14 +9,14 @@ REQUIREMENTS
 
 The program was run and tested on the following platforms:
 
-A. Ubuntu Linux				  18.04
+A. Ubuntu Linux			18.04
 
-B. Python 					  3.6.7
+B. Python 			3.6.7
 
 Package                       Version       
 ----------------------------- --------------
 argcomplete                   1.9.4         
-argparse					  1.1
+argparse			1.1
 auditok                       0.1.5         
 dash                          0.39.0        
 dash-core-components          0.44.0        
